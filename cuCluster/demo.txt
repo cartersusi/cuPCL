@@ -1,0 +1,30 @@
+
+GPU has cuda devices: 1
+----device id: 0 info----
+  GPU : Orin 
+  Capbility: 8.7
+  Global memory: 7619MB
+  Const memory: 64KB
+  SM in a block: 48KB
+  warp size: 32
+  threads in a block: 1024
+  block dim: (1024,1024,64)
+  grid dim: (2147483647,65535,65535)
+
+-------------- test CUDA lib -----------
+-------------- cudaExtractCluster -----------
+LINE:178 18696
+CUDA extract by Time: 5.57304 ms.
+PointCloud representing the Cluster: 162152 data points.
+PointCloud representing the Cluster: 7098 data points.
+PointCloud representing the Cluster: 1263 data points.
+PointCloud representing the Cluster: 257 data points.
+
+-------------- test PCL lib -----------
+PCL(CPU) cluster kd-tree by Time: 54.2449 ms.
+PCL(CPU) cluster extracted by Time: 4083.01 ms.
+PointCloud cluster_indices: 4.
+PointCloud representing the Cluster: 166789 data points.
+PointCloud representing the Cluster: 7410 data points.
+PointCloud representing the Cluster: 1318 data points.
+PointCloud representing the Cluster: 427 data points.

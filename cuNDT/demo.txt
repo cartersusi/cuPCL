@@ -1,0 +1,79 @@
+
+GPU has cuda devices: 1
+----device id: 0 info----
+  GPU : Orin 
+  Capbility: 8.7
+  Global memory: 7619MB
+  Const memory: 64KB
+  SM in a block: 48KB
+  warp size: 32
+  threads in a block: 1024
+  block dim: (1024,1024,64)
+  grid dim: (2147483647,65535,65535)
+
+Loaded 7000 data points for P with the following fields: x y z
+Loaded 7000 data points for Q with the following fields: x y z
+Target rigid transformation : cloud_P -> cloud_Q
+Rotation matrix :
+    | 0.923880 -0.382683 0.000000 | 
+R = | 0.382683 0.923880 0.000000 | 
+    | 0.000000 0.000000 1.000000 | 
+Translation vector :
+t = < 0.000000, 0.000000, 0.200000 >
+
+------------checking PCL NDT(CPU)---------------- 
+PCL align Time: 98.836 ms.
+Normal Distributions Transform has converged: 1 score: 0.801553
+Rotation matrix :
+    | 0.999995 -0.000089 -0.003243 | 
+R = | 0.000089 1.000000 0.000120 | 
+    | 0.003243 -0.000120 0.999995 | 
+Translation vector :
+t = < -0.003342, 0.009198, 0.012395 >
+
+------------checking CUDA NDT(GPU)---------------- 
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+[VoxelGridCovariance::applyFilter] Invalid eigen value! (0, 0, 0)
+demo: /usr/include/eigen3/Eigen/src/SVD/SVDBase.h:258: void Eigen::SVDBase<MatrixType>::_check_compute_assertions() const [with Derived = Eigen::JacobiSVD<Eigen::Matrix<double, 6, 6> >]: Assertion `m_isInitialized && "SVD is not initialized."' failed.
+Aborted (core dumped)

@@ -1,0 +1,57 @@
+
+GPU has cuda devices: 1
+----device id: 0 info----
+  GPU : Orin 
+  Capbility: 8.7
+  Global memory: 7619MB
+  Const memory: 64KB
+  SM in a block: 48KB
+  warp size: 32
+  threads in a block: 1024
+  block dim: (1024,1024,64)
+  grid dim: (2147483647,65535,65535)
+
+Loaded 7000 data points for P with the following fields: x y z
+Loaded 7000 data points for Q with the following fields: x y z
+ iter.Maxiterate 50
+ iter.threshold 1e-09
+ iter.acceptrate 1
+
+Target rigid transformation : cloud_in -> cloud_icp
+Rotation matrix :
+    | 0.923880 -0.382683 0.000000 | 
+R = | 0.382683 0.923880 0.000000 | 
+    | 0.000000 0.000000 1.000000 | 
+Translation vector :
+t = < 0.000000, 0.000000, 0.200000 >
+
+------------checking CUDA ICP(GPU)---------------- 
+CUDA ICP by Time: 87.9349 ms.
+CUDA ICP fitness_score: 0.674415
+matrix_icp calculated Matrix by Class ICP 
+Rotation matrix :
+    | 0.999961 0.005786 0.006755 | 
+R = | -0.005716 0.999933 -0.010278 | 
+    | -0.006815 0.010239 0.999929 | 
+Translation vector :
+t = < 0.037084, 0.009937, 0.004982 >
+
+------------checking PCL ICP(CPU)---------------- 
+PCL icp.align Time: 426.742 ms.
+has converged: 1 score: 0.52534
+CUDA ICP fitness_score: 0.52534
+transformation_matrix:
+   0.998901   0.0107215   0.0457187   0.0793537
+-0.00950698    0.999602  -0.0266997   0.0263257
+ -0.0459864   0.0262354    0.998599   0.0681458
+          0           0           0           1
+
+------------checking PCL GICP(CPU)---------------- 
+PCL Gicp.align Time: 371.449 ms.
+has converged: 1 score: 0.65107
+transformation_matrix:
+  0.996964  0.0289516  0.0722855  0.0624435
+-0.0239535   0.997324 -0.0690778    0.25304
+ -0.074092  0.0671366   0.994989   0.376309
+         0          0          0          1
+
