@@ -19,3 +19,4 @@ CUDA find points: 7519
 PCL(CPU) segment by Time: 32.0006 ms.
 Model coefficients: -0.00270064 0.0424977 0.999093 2.10639
 Model inliers: 7518
+cat cuFliter/demo.txt;cat cuFilter/demo.txt;cat cuICP/demo.txt;cat cuNDT/demo.txt;cat cuOctree/demo.txt;cat cuSegmentation/demo.txt;
